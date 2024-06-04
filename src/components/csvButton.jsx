@@ -1,9 +1,11 @@
+'use client';
 import React from 'react';
 import { Button } from "@/components/ui/button";
 
 const DownloadButton = () => {
     const handleButtonClick = () => {
-        const url = 'http://127.0.0.1:3333/download_csv';
+        const url = process.env.BACKEND_API_URL + '/download_csv';
+        console.log("url", url)
         fetch(url, { method: "GET" })
         .then(response => {
             if (!response.ok) {

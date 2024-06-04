@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { DataContextProvider } from "../contexts/data-context";
+//import { DataContextProvider } from "../contexts/data-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,10 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className + " " + "bg-[#F4F4F4]"}>
-
-        <DataContextProvider>
+        {children}
+        {/* <DataContextProvider>
           {children}
-        </DataContextProvider>
+        </DataContextProvider> */}
       </body>
     </html>
   );

@@ -2,8 +2,6 @@
 import InsightCard from "@/components/insightCard";
 import Navbar from "@/components/navbar";
 import SearchBar from "@/components/searchbar";
-import { DataTableDemo } from "@/components/views/datatable-demo";
-import { DataTableMongo } from "@/components/views/datatable-mongo";
 
 export default function DemoPage() {
   return (
@@ -30,11 +28,12 @@ export default function DemoPage() {
 
         <div className="px-[10vw]">
           <p className="flex items-center font-bold text-xl mt-5 gap-3">
-            <span className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></span>
-            <span>Live Food Hall Database</span>
+            {/* <span className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></span> */}
+            <span className="w-3 h-3 bg-slate-400 rounded-full animate-pulse"></span>
+            <span>Closed Food Hall Database [redacted]</span>
           </p>
 
-          <DataTableDemo />
+          {/* <DataTableDemo /> */}
         </div>
       </div>
     </div>

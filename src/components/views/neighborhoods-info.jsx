@@ -1,3 +1,4 @@
+'use client'
 import { useEffect } from "react";
 import { BusFront, TrainFront, Bike, Plane, Building, Store, LandPlot } from "lucide-react"
 

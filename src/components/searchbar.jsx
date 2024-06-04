@@ -1,6 +1,6 @@
+'use client'
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 const SearchBar = () => {
   const [input, setInput] = useState('');
@@ -15,7 +15,7 @@ const SearchBar = () => {
 
   // Function to call API
   const callApi = (search = input) => {
-    const url = `http://127.0.0.1:3333/crawler/new/${search}`;
+    const url = `${process.env.BACKEND_API_URL}/crawler/new/${search}`;
 
     fetch(url, {
       method: "GET",
@@ -35,7 +35,7 @@ const SearchBar = () => {
   };
 
   const callScoopAPI = () => {
-    const url = `http://127.0.0.1:3333/crawler/new_halls_today`;
+    const url = `${process.env.BACKEND_API_URL}/crawler/new_halls_today`;
     fetch(url, {
       method: "GET"
     })
